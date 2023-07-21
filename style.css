@@ -3,9 +3,13 @@
 :root {
     /* PRIMARY COLORS */
     --light-red: hsl(0, 100%, 67%);
+    --light-red-bg: hsla(0, 100%, 67%, 0.1);
     --orange-yellow:hsl(39, 100%, 56%);
+    --orange-yellow-bg:hsla(39, 100%, 56%, 0.1);
     --green-teal: hsl(166, 100%, 37%);
+    --green-teal-bg: hsla(166, 100%, 37%, 0.1);
     --cobalt-blue: hsl(234, 85%, 45%);
+    --cobalt-blue-bg: hsla(234, 85%, 45%, 0.1);
 
     /* FOR GRADIENT */
     --light-slate-blue: hsl(252, 100%, 67%);
@@ -27,11 +31,157 @@
 }
 
 body {
-    font-size: 18px;
     font-family: 'Hanken Grotesk', sans-serif;
 }
 
+p {
+    font-size: 18px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .wrapper {
+    background-color: var(--white);
+    border-radius: 25px;
+    width: 700px;
+    margin-top: 200px;
+    box-shadow: 0 4px 8px 0 rgba(136, 136, 136, 0.2), 0 6px 20px 0 rgba(136, 136, 136, 0.2);
+}
+
+.container .wrapper .leftDiv {
+    width: 49%;
+    height: 100%;
+    float: left;
+    background-image: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+    border-radius: 25px;
+    padding: 20px;
+    color: var(--white);
+}
+
+.leftDiv .result-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.leftDiv .result-holder .title {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--light-lavender);
+    margin: 1rem;
+}
+
+.leftDiv .result-holder .cicrle {
+    background-image: linear-gradient(var(--violet-blue), var(--persian-blue));
+    margin: 2rem 0;
+    padding: 2rem;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+}
+
+.leftDiv .result-holder .cicrle .result {
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+
+.leftDiv .result-holder .cicrle .base-result {
+    font-weight: 500;
+    font-size: 0.7rem;
+}
+
+.leftDiv .result-holder .message {
+    font-weight: 700;
+    margin: 1rem 0 1rem 0;
+    font-size: 1.5rem;
+}
+
+.leftDiv .result-holder .message-info {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--light-lavender);
+    margin: 0.5rem 0 1.7rem 0;
+}
+
+.container .wrapper .rightDiv {
+    width: 49%;
+    float: right;
+    padding: 20px;
+}
+
+.rightDiv .summary {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.rightDiv .light-red,
+.rightDiv .orange-yellow,
+.rightDiv .green-teal,
+.rightDiv .cobalt-blue {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.rightDiv .light-red {
+    background-color: var(--light-red-bg);
+}
+
+.rightDiv .light-red .category {
+    color: var(--light-red);
+}
+
+.rightDiv .orange-yellow {
+    background-color: var(--orange-yellow-bg);
+}
+
+.rightDiv .orange-yellow .category {
+    color: var(--orange-yellow);
+}
+
+.rightDiv .green-teal {
+    background-color: var(--green-teal-bg);
+}
+
+.rightDiv .green-teal .category {
+    color: var(--green-teal);
+}
+
+.rightDiv .cobalt-blue {
+    background-color: var(--cobalt-blue-bg);
+}
+
+.rightDiv .cobalt-blue .category {
+    color: var(--cobalt-blue);
+}
+
+.btn-continue {
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--dark-gray-blue);
+    padding: 1rem;
+    border-radius: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.btn-continue:hover {
+    background-image: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+}
+
 .attribution { 
+    margin-top: 2rem;
     font-size: 11px; 
     text-align: center; 
 }
