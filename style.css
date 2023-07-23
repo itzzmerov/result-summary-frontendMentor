@@ -48,7 +48,7 @@ p {
     background-color: var(--white);
     border-radius: 25px;
     width: 700px;
-    margin-top: 200px;
+    margin-top: 10%;
     box-shadow: 0 4px 8px 0 rgba(136, 136, 136, 0.2), 0 6px 20px 0 rgba(136, 136, 136, 0.2);
 }
 
@@ -188,4 +188,25 @@ p {
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+/***** RESPONSIVENESS DESIGN *****/
+
+@media (max-width: 436px) {
+    .container .wrapper {
+        flex-direction: column;
+        margin-top: 0%;
+    }
+
+    .container .wrapper .leftDiv {
+        width: 100%;
+    }
+
+    .container .wrapper .rightDiv {
+        width: 100%;
+    }
+
+    .container .wrapper .rightDiv {
+        margin-top: 20px;
+    }
 }
