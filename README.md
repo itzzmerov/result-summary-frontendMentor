@@ -47,15 +47,47 @@ Users should be able to:
 ### Highlights of the code
 
 ```html
-<div class="leftDiv">
-  <div class="result-holder">
-    <h4 class="title">Your Result</h4>
-    <div class="cicrle">
-      <h1 class="result">76</h1>
-      <h5 class="base-result">out 100</h5>
+<div class="container">
+  <div class="wrapper">
+
+    <div class="leftDiv">
+      <div class="result-holder">
+        <h4 class="title">Your Result</h4>
+        <div class="cicrle">
+          <h1 class="result">76</h1>
+          <h5 class="base-result">out 100</h5>
+        </div>
+        <h3 class="message">Great</h3>
+        <p class="message-info">You scored higher than 65% of the people who have taken these tests.</p>
+      </div>
     </div>
-    <h3 class="message">Great</h3>
-    <p class="message-info">You scored higher than 65% of the people who have taken these tests.</p>
+
+    <div class="rightDiv">
+      <h1 class="summary">Summary</h1>
+
+      <div class="light-red">
+        <p class="category">Reaction</p>
+        <p class="category-grade"><b>80</b> / 100</p>
+      </div>
+
+      <div class="orange-yellow">
+        <p class="category">Memory</p>
+        <p class="category-grade"><b>92</b> / 100</p>
+      </div>
+
+      <div class="green-teal">
+        <p class="category">Verbal</p>
+        <p class="category-grade"><b>61</b> / 100</p>
+      </div>
+
+      <div class="cobalt-blue">
+        <p class="category">Visual</p>
+        <p class="category-grade"><b>72</b> / 100</p>
+      </div>
+
+      <a href="#" class="btn-continue">Continue</a>
+    </div>
+
   </div>
 </div>
 ```
@@ -82,6 +114,25 @@ Users should be able to:
   --pale-blue: hsl(221, 100%, 96%);
   --light-lavender: hsl(241, 100%, 89%);
   --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+@media (max-width: 436px) {
+    .container .wrapper {
+        flex-direction: column;
+        margin-top: 0%;
+    }
+
+    .container .wrapper .leftDiv {
+        width: 100%;
+    }
+
+    .container .wrapper .rightDiv {
+        width: 100%;
+    }
+
+    .container .wrapper .rightDiv {
+        margin-top: 20px;
+    }
 }
 ```
 
